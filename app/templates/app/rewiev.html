@@ -1,0 +1,39 @@
+{% extends "app/layout.html" %}
+
+{% block content %}
+{% if form != None %}
+    <br><h2 class="center_block ">Пройдите, пожалуйста, опрос</h2><br>
+        <div class="left_text">
+            <form method="post">
+            {% csrf_token %}
+            <label for="{{ form.name.id_for_label }}">{{ form.name.label}}</label>
+            {{ form.name}} <br><br>
+            <label for="{{ form.opinion.id_for_label }}">{{ form.opinion.label}}</label>
+            {{ form.opinion}} <br><br>
+            <label for="{{ form.preposition.id_for_label }}">{{ form.preposition.label}}</label>
+            {{ form.preposition}} <br><br>
+            <label for="{{ form.flag.id_for_label }}">{{ form.flag.label}}</label>
+            {{ form.flag}} <br><br>
+            <label for="{{ form.email.id_for_label }}">{{ form.email.label}}</label>
+            {{ form.email}} <br><br>
+            <label for="{{ form.positive.id_for_label }}">{{ form.positive.label}}</label>
+            {{ form.positive}} <br><br>
+            <label for="{{ form.negative.id_for_label }}">{{ form.negative.label}}</label>
+            {{ form.negative}} <br><br>
+            <input type="submit" valye="Отправить" />
+            </form>
+        </div>
+{% else %}
+    <br><h2 class="center">Благодарим за ваш ответ!</h2>
+    <h3 class="center">Вы сообщили следующее:</h3class="center">
+    <ul class="center">
+        <li><span>Имя:</span>{{ data.name }}</li>
+        <li><span>Мнение о сайте:</span>{{ data.opinion }}</li>
+        <li><span>Предположение о возрасте:</span>{{ data.preposition}}</li>
+        <li><span>Ваш email:</span>{{ data.email}}</li>
+        <li><span>Плюсы:</span>{{ data.positive}}</li>
+        <li><span>Минусы:</span>{{ data.negative}}</li>
+    </ul>
+{% endif %}
+{% endblock %}
+

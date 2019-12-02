@@ -1,0 +1,14 @@
+﻿{% extends "app/layout.html" %}
+
+{% block content %}
+<h2 class="center_block">Регистрация пользователя</h2>
+    <form method="POST" > {% csrf_token %}
+        <div style="color:#808080" >
+            {{regform.as_p}}
+
+            <button type="submit" class="save btn btn-default" >
+                Зарегистрировать
+            </button>
+        </div>
+    </form>
+{% endblock %}

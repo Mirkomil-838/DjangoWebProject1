@@ -1,0 +1,113 @@
+body {
+    background: url('Body1.PNG') no-repeat center center fixed;
+    padding-top: 80px;
+    padding-bottom: 20px;
+}
+
+/* Set padding to keep content from hitting the edges */
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+    background-color: black ;
+}
+
+/* Set width on the form input elements since they're 100% wide by default */
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+/* styles for validation helpers */
+.field-validation-error {
+    color: #b94a48;
+}
+
+.field-validation-valid {
+    display: none;
+}
+
+input.input-validation-error {
+    border: 1px solid #b94a48;
+}
+
+input[type="checkbox"].input-validation-error {
+    border: 0 none;
+}
+
+.validation-summary-errors {
+    color: #b94a48;
+}
+
+.validation-summary-valid {
+    display: none;
+}
+
+.center {
+    border: 2px solid #ff6a00;
+    text-align: center;
+}
+.center_block {
+    border: 2px solid #ff6a00;
+    text-align: center;
+}
+.p_black {
+    color:black;
+}
+.left_text {
+    background-color: rgba(95, 94, 93, 0.31);
+    padding-top: 30px;
+    padding-left: 50px;
+    padding-bottom: 30px;
+    color: whitesmoke;
+    border: 2px solid #ff6a00;
+}
+
+address{
+    color:whitesmoke;
+}
+a {
+    color: #dbed3e;
+}
+h1 {
+    font-family: GothicE;
+}
+h5 {
+    color: #b302a2;
+}
+
+h2 {
+ 
+    color: darkgoldenrod;
+    font-family: 'Brush Script MT';
+}
+h3 {
+    color: rgba(227, 49, 12, 0.82);
+}
+h4 {
+    text-align: right;
+    padding-right: 50px;
+    color: #ff6a00;
+}
+p {
+    color: white;
+}
+
+.center_img {
+    
+    height: 200px;
+    width: 200px;
+}
+
+.center_p {
+    text-align: center;
+}
+
+.center:hover {
+    border: 2px solid #2ff01c;
+    background-color:#141212;
+}
+
+a:hover {
+    color: #f7c802;
+}
