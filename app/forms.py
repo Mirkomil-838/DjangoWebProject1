@@ -52,5 +52,5 @@ class BlogForm (forms.ModelForm):
 
     class Meta:
         model = Blog # используемая модель
-        fields = ('image' ,'author','title','description','content','posted') # требуется заполнить только поле text
-        labels = {'image':'Изображение' ,'author':'Автор', 'title':'Заголовок', 'description':'Краткое описание', 'content':'Содержание', 'posted':'Дата'} # метка к полю формы text
+        fields = ('image' ,'author','title','description','content','posted','video','video_1','video_2','imagevideo','imagevideo_1','imagevideo_2') # требуется заполнить только поле text
+        labels = {'image':'Изображение' ,'author':'Автор', 'title':'Заголовок', 'description':'Краткое описание', 'content':'Содержание', 'posted':'Дата', 'video':'Видео 1','video_1':'Видео 2','video_2':'Видео 3','imagevideo':'Постер к Видео 1','imagevideo_1':'Постер к Видео 2','imagevideo_2':'Постер к Видео 3'} # метка к полю формы text

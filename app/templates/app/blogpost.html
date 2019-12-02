@@ -8,13 +8,35 @@
 <img class="center_img" src="{{ post_1.image.url }}" alt=" Картинка статьи блога" />
 </p>
 {% endif %}
+<br/>
 
 {% autoescape off%}
 <p> {{post_1.content|linebreaksbr}} </p>      {# вывод текста по абзацам#}
 {% endautoescape %}
 
-<h4> {{post_1.author}} </h4>
+{% if post_1.video and post_1.video.url != '/media/temp.mp4' %}
+<h2 style="text-align:center">Видео 1</h2>
+<p class="center_p"> 
+<VIDEO  src="{{ post_1.video.url }}" controls="controls" width="400" height="300" poster="{{ post_1.imagevideo.url }}"></VIDEO>
+</p>
+{% endif %}
 
+{% if post_1.video_1 and post_1.video_1.url != '/media/temp.mp4' %}
+<h2 style="text-align:center">Видео 2</h2>
+<p class="center_p"> 
+<VIDEO  src="{{ post_1.video_1.url }}" controls="controls" width="400" height="300" poster="{{ post_1.imagevideo_1.url }}"></VIDEO>
+</p>
+{% endif %}
+
+{% if post_1.video_2 and post_1.video_2.url != '/media/temp.mp4' %}
+<h2 style="text-align:center">Видео 3</h2>
+<p class="center_p"> 
+<VIDEO  src="{{ post_1.video_2.url }}" controls="controls" width="400" height="300" poster="{{ post_1.imagevideo_2.url }}"></VIDEO>
+</p>
+{% endif %}
+
+<h4> {{post_1.author}} </h4>
+<br/>
 {% if user.is_authenticated %}
     <h3>Добавить комментарий</h3>
     <form method="POST" >{% csrf_token %} {# защита от атак CSRF#}

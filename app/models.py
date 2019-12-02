@@ -11,6 +11,12 @@ from django.contrib.auth.models import User
 
 
 class Blog(models.Model):
+    video = models.FileField(default = 'temp.mp4', verbose_name='Путь к видео')
+    video_1 = models.FileField(default = 'temp.mp4', verbose_name='Путь ко 2 видео')
+    video_2 = models.FileField(default = 'temp.mp4', verbose_name='Путь к 3 видео')
+    imagevideo = models.FileField(default = 'temp.jpg', verbose_name='Путь к постеру для видео 1')
+    imagevideo_1 = models.FileField(default = 'temp.jpg', verbose_name='Путь к постеру для видео 2')
+    imagevideo_2 = models.FileField(default = 'temp.jpg', verbose_name='Путь к постеру для видео 3')
     image = models.FileField(default = 'temp.jpg', verbose_name='Путь к картинке')
     author = models.ForeignKey(User, null=True, blank=True, on_delete = models.SET_NULL, verbose_name = "Автор")
     title=models.CharField(max_length=100, unique_for_date="posted", verbose_name='Заголовок')

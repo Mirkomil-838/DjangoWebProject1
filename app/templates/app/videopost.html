@@ -2,14 +2,37 @@
 
 {% block content %}
 
-<div>
-    <h1>Видео-клип 1</h1>
-    <VIDEO src="/media/AllNightmareLord_1.mp4" controls="controls" width="400" height="300" poster="/media/AllNight_1.jpg"></VIDEO>
+
+{% for post in posts %}
+<div style="border: 2px solid #ff6a00">
+<br/>
+<h1 style="color:whitesmoke; text-align:center"> Автор - {{post.author}}:Пост - "{{ post.title }}" </h1>
+
+{% if post.video and post.video.url != '/media/temp.mp4' %}
+<h2 style="text-align:center">Видео к посту "{{ post.title }}" №1</h2>
+<p class="center_p"> 
+<VIDEO  src="{{ post.video.url }}" controls="controls" width="400" height="300" poster="{{ post.imagevideo.url }}" ></VIDEO>
+</p>
+{% else %}
+<h3 style="text-align:center">Видео отсутствует</h3>
+{% endif %}
+<br/>
+{% if post.video_1 and post.video_1.url != '/media/temp.mp4' %}
+<h2 style="text-align:center">Видео к посту "{{ post.title }}" №2</h2>
+<p class="center_p"> 
+<VIDEO  src="{{ post.video_1.url }}" controls="controls" width="400" height="300" poster="{{ post.imagevideo_1.url }}"></VIDEO>
+</p>
+{% endif %}
+<br/>
+{% if post.video_2 and post.video_2.url != '/media/temp.mp4' %}
+<h2 style="text-align:center">Видео к посту "{{ post.title }}" №3</h2>
+<p class="center_p"> 
+<VIDEO  src="{{ post.video_2.url }}" controls="controls" width="400" height="300" poster="{{ post.imagevideo_2.url }}"></VIDEO>
+</p>
+{% endif %}
+
 </div>
-<hr/>
-<div>
-    <h1>Видео-клип 2</h1>
-    <VIDEO src="/media/AllNightmareLord_2.mp4" controls="controls" width="400" height="300" poster="/media/AllNight_2.jpg"></VIDEO>
-</div>
+
+{% endfor %}
 
 {% endblock %}

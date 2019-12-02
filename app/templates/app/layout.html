@@ -19,19 +19,19 @@
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                 </button>
-                <a href="/" class="navbar-brand"> <img src="{% static 'app/content/slayerIcon.jpg ' %}" alt="logo" /> </a>
+                <a href="/" class="navbar-brand"> <img src="{% static 'app/content/slayerIcon.jpg' %}" alt="logo" /> </a>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     <li><a href="{% url 'home' %}">Главная</a></li>
-                    <li><a href="{% url 'about' %}">О нас</a></li>
-                    <li><a href="{% url 'contact' %}">Контакты</a></li>
-                    <li><a href="{% url 'blog' %}">Блог</a></li>
-                    <li><a href="{% url 'rewiev' %}">Отзыв</a></li>
+                    <li><a href="{% url 'about' %}">О нас</a></li>                   
+                    <li><a href="{% url 'blog' %}">Блог</a></li>          
                     {% if user.is_superuser %}
                     <li><a href="{% url 'newpost' %}">Добавление статьи</a></li>
                     {% endif %}
                     <li><a href="{% url 'videopost' %}">Видео</a></li>
+                    <li><a href="{% url 'rewiev' %}">Отзыв</a></li>
+                    <li><a href="{% url 'contact' %}">Контакты</a></li>
 
                 </ul>
                 {% include 'app/loginpartial.html' %}

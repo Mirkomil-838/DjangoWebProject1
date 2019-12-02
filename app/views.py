@@ -210,14 +210,18 @@ def newpost(request):
     )
 
 def videopost(request):
-    """Renders the about page."""
+    """Renders the blog page."""
+
     assert isinstance(request, HttpRequest)
+    posts = Blog.objects.all() # запрос на выбор всех статей блога из модели
+
     return render(
         request,
         'app/videopost.html',
         {
-            'title':'Видео',
-            'message':'"Дополнительные материалы"',
+            'title':'Блог',
+            'posts': posts, # передача списка статей в шаблон веб-страницы
             'year':datetime.now().year,
         }
+
     )

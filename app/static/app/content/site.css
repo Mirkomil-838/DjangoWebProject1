@@ -1,5 +1,5 @@
 body {
-    background: url('Body1.PNG') no-repeat center center fixed;
+    background: url('Body1.png') no-repeat center center fixed;
     padding-top: 80px;
     padding-bottom: 20px;
 }
@@ -95,8 +95,8 @@ p {
 
 .center_img {
     
-    height: 200px;
-    width: 200px;
+    height: 300px;
+    width: 350px;
 }
 
 .center_p {
