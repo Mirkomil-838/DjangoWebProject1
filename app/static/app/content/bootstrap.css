@@ -4536,8 +4536,8 @@ textarea.input-group-sm > .input-group-btn > .btn {
   color: #999999;
 }
 
-.navbar-inverse .navbar-nav > li > a {
-        color: #ff0000;
+    .navbar-inverse .navbar-nav > li > a {
+        color: rgba(184, 134, 11,250);
     }
 
 .navbar-inverse .navbar-nav > li > a:hover,
@@ -4547,10 +4547,10 @@ textarea.input-group-sm > .input-group-btn > .btn {
         border-radius: 20%;
     }
 
-.navbar-inverse .navbar-nav > li > a:active{
-  background-color:#ec0707;
-  border-radius: 20%;  
-     }
+        .navbar-inverse .navbar-nav > li > a:active {
+            background-color: rgba(184, 134, 11,250);
+            border-radius: 20%;
+        }
 
 .navbar-inverse .navbar-nav > .active > a,
 .navbar-inverse .navbar-nav > .active > a:hover,
